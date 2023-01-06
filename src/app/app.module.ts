@@ -7,13 +7,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavBarComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
