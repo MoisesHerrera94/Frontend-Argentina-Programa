@@ -1,18 +1,18 @@
-<div class="row mt-5">
+<div class="row pt-3">
     <div class="col">
         <p class="fs-2 text-center">Experiencias</p>
     </div>
 </div>
-<div class="row">
-    <div class="col-3">
-        
+<div class="row" *ngFor="let item of experiencias">
+    <div class="col-sm-2">
+
     </div>
     <div class="col">
-        <div >
-            <p class="my-0">Puesto</p>
-            <p class="my-0">Nombre de la empresa</p>
-            <p class="my-0">Fechas</p>
-            <p class="my-0">Lugar de trabajo</p>
+        <div>
+            <p class="my-0 fs-5 fw-bold">{{item.puesto}}</p>
+            <p class="my-0">{{item.empresa}}</p>
+            <p class="my-0 fw-lighter">Desde:{{item.fechaD}} - Hasta:{{item.fechaA}}</p>
         </div>
     </div>
+    <hr class="my-2">
 </div>
