@@ -1,0 +1,12 @@
+<div>
+    <div class="row py-3">
+        <h2 class="text-center">Habilidades</h2>
+    </div>
+    <div class="row d-flex  justify-content-around">
+        <div class="col-md-4 col-6 d-flex justify-content-center my-2" *ngFor="let item of habilidades">
+            <div class="d-flex justify-content-center align-items-center bg-primary rounded-circle hab">
+                <p class="text-center">{{item.habilidad}}</p>
+            </div>
+        </div>
+    </div>
+</div>
