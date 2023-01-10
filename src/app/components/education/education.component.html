@@ -1,0 +1,16 @@
+<div>
+    <div class="row py-3">
+        <h2 class="text-center">Educacion</h2>
+    </div>
+    <div class="row" *ngFor="let item of educacion">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col">
+            <p class="my-0 fs-5 fw-bold">{{item.titulo}}</p>
+            <p class="my-0">{{item.instituto}}</p>
+            <p class="my-0 fw-lighter">{{item.fecha}}</p>
+        </div>
+        <hr class="my-2">
+    </div>
+</div>
