@@ -4,7 +4,8 @@
     </div>
     <div class="row d-flex  justify-content-around">
         <div class="col-md-4 col-6 d-flex justify-content-center my-2" *ngFor="let item of habilidades">
-            <div class="d-flex justify-content-center align-items-center bg-primary rounded-circle hab">
+            <div class="d-flex flex-column justify-content-center rounded-circle hab">
+                <fa-icon [icon]=item.icon size="3x" class="text-center"></fa-icon>
                 <p class="text-center">{{item.habilidad}}</p>
             </div>
         </div>

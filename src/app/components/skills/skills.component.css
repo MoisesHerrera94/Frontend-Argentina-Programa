@@ -1,4 +1,9 @@
 .hab {
     height: 9rem;
     width: 9rem;
+    background: rgba(223, 223, 223, 1);
+}
+
+.hab a {
+    text-decoration: none;
 }
