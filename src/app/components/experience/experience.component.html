@@ -4,15 +4,15 @@
     </div>
 </div>
 <div class="row" *ngFor="let item of experiencias">
-    <div class="col-sm-2">
-
+    <div class="col-2 d-flex justify-content-end">
+        <fa-icon [icon]="work" size="2x" class="d-flex align-items-center"></fa-icon>
     </div>
-    <div class="col">
+    <div class="col mb-1">
         <div>
             <p class="my-0 fs-5 fw-bold">{{item.puesto}}</p>
             <p class="my-0">{{item.empresa}}</p>
             <p class="my-0 fw-lighter">Desde:{{item.fechaD}} - Hasta:{{item.fechaA}}</p>
+            <hr>
         </div>
     </div>
-    <hr class="my-2">
 </div>

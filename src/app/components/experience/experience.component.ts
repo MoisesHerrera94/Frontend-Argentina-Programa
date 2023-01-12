@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {faBriefcase} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-experience',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
+
+  work = faBriefcase;
 
   experiencias = [{id: 1, puesto:"Administrativo de Ventas", empresa:"M Royo SA", fechaD:"15/02/2019",
   fechaA:"Actualidad"}, {id: 2, puesto:"Vendedor", empresa:"F Falinia CA", fechaD:"01/11/2013",

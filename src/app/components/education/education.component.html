@@ -3,14 +3,14 @@
         <h2 class="text-center">Educacion</h2>
     </div>
     <div class="row" *ngFor="let item of educacion">
-        <div class="col-2">
-
+        <div class="col-2 d-flex justify-content-end">
+            <fa-icon [icon]="book" size="2x" class="d-flex align-items-center"></fa-icon>
         </div>
-        <div class="col">
+        <div class="col mb-1">
             <p class="my-0 fs-5 fw-bold">{{item.titulo}}</p>
             <p class="my-0">{{item.instituto}}</p>
             <p class="my-0 fw-lighter">{{item.fecha}}</p>
+            <hr>
         </div>
-        <hr class="my-2">
     </div>
 </div>
