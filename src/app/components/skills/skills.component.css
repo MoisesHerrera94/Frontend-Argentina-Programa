@@ -7,3 +7,11 @@
 .hab a fa-vicon {
     padding: 0px;
 }
+
+.icon {
+    color: var(--color-icon);
+    display: inline-block;
+    margin-left: 4px;
+    padding: 0px;
+    text-decoration: none;
+}

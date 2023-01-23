@@ -10,7 +10,14 @@
             <p class="my-0 fs-5 fw-bold">{{item.titulo}}</p>
             <p class="my-0">{{item.instituto}}</p>
             <p class="my-0 fw-lighter">{{item.fecha}}</p>
-            <hr>
+            <div class="d-flex justify-content-end">
+                <a href="#" class="icon">
+                    <fa-icon [icon]="editar"></fa-icon>
+                </a>
+                <a href="#" class="icon">
+                    <fa-icon [icon]="borrar"></fa-icon>
+                </a>
+            </div>
         </div>
     </div>
 </div>

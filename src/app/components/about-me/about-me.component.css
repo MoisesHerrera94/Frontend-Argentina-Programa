@@ -17,8 +17,15 @@
 	position: relative;
 }
 
-.acerca-de article {
+.acerca-de .articulo {
     background: #ffff;
     padding: 20px;
 	box-shadow: 0 0 15px rgba(0,0,0,.35);
+}
+
+.acerca-de .articulo a {
+    color: var(--color-icon);
+    display: inline-block;
+    padding: 5px;
+    margin: 0px 4px;
 }

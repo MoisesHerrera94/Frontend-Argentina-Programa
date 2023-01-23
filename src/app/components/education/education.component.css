@@ -1,0 +1,6 @@
+.icon {
+    color: var(--color-icon);
+    display: inline-block;
+    padding: 5px;
+    margin: 0px 4px;
+}

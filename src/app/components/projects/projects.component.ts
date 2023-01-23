@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import {faPen, faTrash} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-projects',
@@ -9,6 +10,8 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons'
 export class ProjectsComponent implements OnInit {
 
   github = faGithub;
+  editar = faPen;
+  borrar = faTrash;
 
   proyectos = [{id:1, nombre:"Proyecto 1", tecnologias:"Las tecnologias", link:""}, 
   {id:2, nombre:"Proyecto 2", tecnologias:"Las tecnologias", link:""}, 

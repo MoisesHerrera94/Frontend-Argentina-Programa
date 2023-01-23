@@ -3,4 +3,5 @@
     height: 200px;
     background: url(../../../img/Portada.jpeg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
