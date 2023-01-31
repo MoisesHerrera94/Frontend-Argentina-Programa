@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {faBook, faPen, faTrash} from '@fortawesome/free-solid-svg-icons'
+import { AddButtonComponent } from '../add-button/add-button.component';
 
 @Component({
   selector: 'app-education',

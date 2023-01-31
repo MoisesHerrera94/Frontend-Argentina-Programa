@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { AddEducationComponent } from './components/add-education/add-education.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     FooterComponent,
     SignInComponent,
     AddButtonComponent,
-    HomePageComponent
+    HomePageComponent,
+    AddEducationComponent
   ],
   imports: [
     BrowserModule,
