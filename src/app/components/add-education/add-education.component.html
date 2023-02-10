@@ -1,1 +1,24 @@
-<p>add-education works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 d-flex justify-content-center"> 
+            <form #educationForm="ngForm" class="d-flex flex-column" (ngSubmit)="onSubmit(educationForm.value)">
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="model.titulo">
+                  </div>
+                  <div class="mb-3">
+                    <label for="instituto" class="form-label">Instituto</label>
+                    <input type="text" class="form-control" id="instituto" name="instituto" [(ngModel)]="model.instituto">
+                  </div>
+                  <div class="mb-3">
+                    <label for="culminacion" class="form-label">Culminacion</label>
+                    <input type="date" class="form-control" id="culminacion" name="fecha" [(ngModel)]="model.fecha">
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <button class="btn btn-primary m-2" routerLink="">Volver</button>
+                    <button type="submit" class="btn btn-primary m-2">Submit</button>
+                  </div>
+            </form>
+        </div>
+    </div>
+</div>

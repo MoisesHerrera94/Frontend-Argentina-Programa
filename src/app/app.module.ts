@@ -16,6 +16,9 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { AddEducationComponent } from './components/add-education/add-education.component';
+import { FormsModule } from '@angular/forms';
+import { AddExperienceComponent } from './components/add-experience/add-experience.component';
+import { AddProjectsComponent } from './components/add-projects/add-projects.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +34,15 @@ import { AddEducationComponent } from './components/add-education/add-education.
     SignInComponent,
     AddButtonComponent,
     HomePageComponent,
-    AddEducationComponent
+    AddEducationComponent,
+    AddExperienceComponent,
+    AddProjectsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

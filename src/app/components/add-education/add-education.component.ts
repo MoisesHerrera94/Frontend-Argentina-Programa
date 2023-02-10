@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEducationComponent implements OnInit {
 
+  model = {
+    titulo:"",
+    instituto:"",
+    fecha:Date
+  }
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
+  onSubmit(values:any): void{
+    console.log('Form values', values)
+  }
 }
