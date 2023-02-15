@@ -17,4 +17,17 @@
         </div>
     </div>
 </div>
-<app-add-button routerLink="addProject"></app-add-button>
+<app-add-button data-bs-toggle="modal" data-bs-target="#project-modal"></app-add-button>
+<div class="modal" id="project-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">   
+                <h5>Ingrese Datos:</h5>    
+                <button class="btn btn-close" data-bs-dismiss="modal"></button>  
+            </div>
+            <div class="modal-body">  
+                <app-add-projects></app-add-projects>
+            </div>
+        </div>
+    </div>
+</div>
