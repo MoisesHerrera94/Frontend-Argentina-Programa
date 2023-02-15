@@ -19,7 +19,6 @@ import { AddEducationComponent } from './components/add-education/add-education.
 import { FormsModule } from '@angular/forms';
 import { AddExperienceComponent } from './components/add-experience/add-experience.component';
 import { AddProjectsComponent } from './components/add-projects/add-projects.component';
-import { ModalComponent } from './components/modals/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +36,7 @@ import { ModalComponent } from './components/modals/modal/modal.component';
     HomePageComponent,
     AddEducationComponent,
     AddExperienceComponent,
-    AddProjectsComponent,
-    ModalComponent
+    AddProjectsComponent
   ],
   imports: [
     BrowserModule,
