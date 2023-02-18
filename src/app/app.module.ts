@@ -19,6 +19,9 @@ import { AddEducationComponent } from './components/add-education/add-education.
 import { FormsModule } from '@angular/forms';
 import { AddExperienceComponent } from './components/add-experience/add-experience.component';
 import { AddProjectsComponent } from './components/add-projects/add-projects.component';
+import { ExperienceModalComponent } from './components/modals/experience-modal/experience-modal.component';
+import { EducationModalComponent } from './components/modals/education-modal/education-modal.component';
+import { ProjectModalComponent } from './components/modals/project-modal/project-modal.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { AddProjectsComponent } from './components/add-projects/add-projects.com
     HomePageComponent,
     AddEducationComponent,
     AddExperienceComponent,
-    AddProjectsComponent
+    AddProjectsComponent,
+    ExperienceModalComponent,
+    EducationModalComponent,
+    ProjectModalComponent
   ],
   imports: [
     BrowserModule,
