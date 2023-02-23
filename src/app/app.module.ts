@@ -16,7 +16,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { AddEducationComponent } from './components/add-education/add-education.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddExperienceComponent } from './components/add-experience/add-experience.component';
 import { AddProjectsComponent } from './components/add-projects/add-projects.component';
 import { ExperienceModalComponent } from './components/modals/experience-modal/experience-modal.component';
@@ -48,7 +48,8 @@ import { ProjectModalComponent } from './components/modals/project-modal/project
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
