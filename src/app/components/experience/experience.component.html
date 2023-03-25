@@ -3,7 +3,7 @@
         <h2 class="text-center">Experiencias</h2>
     </div>
 </div>
-<div class="row experiencia" *ngFor="let item of experiencias">
+<div class="row experiencia" *ngFor="let item of llamada">
     <div class="col-2 d-flex justify-content-end">
         <fa-icon [icon]="work" size="2x" class="d-flex align-items-center"></fa-icon>
     </div>
@@ -11,17 +11,18 @@
         <div>
             <p class="my-0 fs-5 fw-bold">{{item.puesto}}</p>
             <p class="my-0">{{item.empresa}}</p>
-            <p class="my-0 fw-lighter">Desde:{{item.fechaD}} - Hasta:{{item.fechaA}}</p>
+            <p class="my-0 fw-lighter">Desde:{{item.mesI+" "+item.anoI}} - Hasta:{{item.mesC+" "+item.anoC}}</p>
         </div>
         <div class="d-flex justify-content-end">
             <a href="#" class="icon">
-                <fa-icon [icon]="editar"></fa-icon>
+                <fa-icon [icon]="editar" data-bs-toggle="modal" data-bs-target="#experience-modal"></fa-icon>
             </a>
-            <a href="#" class="icon">
+            <a href="#" class="icon" (click)="onClickDelete(item.id)">
                 <fa-icon [icon]="borrar"></fa-icon>
             </a>
         </div>
     </div>
+    <app-experience-modal></app-experience-modal>  
 </div>
 <app-add-button data-bs-toggle="modal" data-bs-target="#experience-modal"></app-add-button>
 <app-experience-modal></app-experience-modal>

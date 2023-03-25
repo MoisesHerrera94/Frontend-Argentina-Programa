@@ -12,11 +12,51 @@
                 </div>
                 <div class="my-1">
                     <label for="fechaI" class="form-label">Fecha de Inicio:</label>
-                    <input type="date" class="form-control" id="fechaI" name="fechaI" ngModel>
+                    <div class="input-group">
+                        <label class="input-group-text">Mes</label>
+                        <select name="mesI" id="mesI" class="form-select" ngModel>
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septimbre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select>
+                    </div>   
+                    <div class="input-group my-3">
+                        <span class="input-group-text">Año</span>
+                        <input type="number" name="anoI" id="anoI" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" ngModel>
+                    </div>
                 </div>
                 <div class="my-1">
                     <label for="fechaC" class="form-label">Fecha de Culminacion</label>
-                    <input type="date" class="form-control" id="fechaC" name="fechaC" ngModel>
+                    <div class="input-group">
+                        <label class="input-group-text">Mes</label>
+                        <select name="mesC" id="mesC" class="form-select" ngModel>
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septimbre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select>
+                    </div>   
+                    <div class="input-group my-3">
+                        <span class="input-group-text">Año</span>
+                        <input type="number" name="anoC" id="anoC" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" ngModel>
+                    </div>
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-lg btn-primary m-2">Enviar</button>

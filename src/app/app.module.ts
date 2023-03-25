@@ -22,6 +22,8 @@ import { AddProjectsComponent } from './components/add-projects/add-projects.com
 import { ExperienceModalComponent } from './components/modals/experience-modal/experience-modal.component';
 import { EducationModalComponent } from './components/modals/education-modal/education-modal.component';
 import { ProjectModalComponent } from './components/modals/project-modal/project-modal.component';
+import { ConexionApiService } from './conexion-api.service';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -49,9 +51,10 @@ import { ProjectModalComponent } from './components/modals/project-modal/project
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ConexionApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
