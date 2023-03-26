@@ -18,6 +18,7 @@ export class AddExperienceComponent implements OnInit {
 
   onSubmit(values:listaExerienciasI){
     this.conexion.addExperiencia(values).subscribe(data => console.log(data));
+    window.location.reload()
   }
 
 }

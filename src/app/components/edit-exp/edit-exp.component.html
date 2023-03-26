@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">  
+        <div class="col-12 d-flex justify-content-center">
+            <form #experienceForm="ngForm" class="d-flex flex-column" (ngSubmit)="editando()">
+                <div class="my-1">
+                    <label for="puesto" class="form-label">Puesto</label>
+                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="valores.puesto">
+                </div>
+                <div class="my-1">
+                    <label for="empresa" class="form-label">Empresa</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="valores.empresa">
+                </div>
+                <div class="my-1">
+                    <label for="fechaI" class="form-label">Fecha de Inicio:</label>
+                    <div class="input-group">
+                        <label class="input-group-text">Mes</label>
+                        <select name="mesI" id="mesI" class="form-select" ngModel>
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septimbre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select>
+                    </div>   
+                    <div class="input-group my-3">
+                        <span class="input-group-text">Año</span>
+                        <input type="number" name="anoI" id="anoI" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" [(ngModel)]="valores.anoI">
+                    </div>
+                </div>
+                <div class="my-1">
+                    <label for="fechaC" class="form-label">Fecha de Culminacion</label>
+                    <div class="input-group">
+                        <label class="input-group-text">Mes</label>
+                        <select name="mesC" id="mesC" class="form-select" ngModel>
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septimbre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select>
+                    </div>   
+                    <div class="input-group my-3">
+                        <span class="input-group-text">Año</span>
+                        <input type="number" name="anoC" id="anoC" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" [(ngModel)]="valores.anoC">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-lg btn-primary m-2">Enviar</button>
+                    <button type="button" class="btn btn-lg btn-primary m-2" routerLink="">Volver</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

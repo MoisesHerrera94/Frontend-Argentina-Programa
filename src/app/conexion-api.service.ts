@@ -29,4 +29,9 @@ export class ConexionApiService {
     console.log(this.url+delExp+id)
     return this.http.delete<listaExerienciasI>(this.url+delExp+id);
   }
+
+  buscarExperiencia(id:any):Observable<listaExerienciasI>{
+    let buscarExp = "/experiencia/buscar/"
+    return this.http.get<listaExerienciasI>(this.url+buscarExp+id)
+  }
 }

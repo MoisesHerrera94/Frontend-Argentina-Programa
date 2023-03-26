@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {faBriefcase, faPen, faTrash} from '@fortawesome/free-solid-svg-icons'
 import { ConexionApiService } from 'src/app/conexion-api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-experience',
@@ -18,7 +19,7 @@ export class ExperienceComponent implements OnInit {
   fechaA:"Actualidad"}, {id: 2, puesto:"Vendedor", empresa:"F Falinia CA", fechaD:"01/11/2013",
   fechaA:"30/04/2018"}]
 
-  constructor(private conexion:ConexionApiService) {
+  constructor(private conexion:ConexionApiService, private router:Router) {
     
    }
 
@@ -29,8 +30,12 @@ export class ExperienceComponent implements OnInit {
   }
 
   onClickDelete(id:number){
-    console.log("Este es el Id: "+id)
-    this.conexion.deleteExperiencia(id).subscribe(data => console.log(data));
+    this.conexion.deleteExperiencia(id).subscribe();
+    window.location.reload()
+  }
+
+  editExp(id:number){
+    this.router.navigate(['editExperiencia', id])
   }
 
 }

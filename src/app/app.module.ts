@@ -23,7 +23,8 @@ import { ExperienceModalComponent } from './components/modals/experience-modal/e
 import { EducationModalComponent } from './components/modals/education-modal/education-modal.component';
 import { ProjectModalComponent } from './components/modals/project-modal/project-modal.component';
 import { ConexionApiService } from './conexion-api.service';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { EditExpComponent } from './components/edit-exp/edit-exp.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {HttpClientModule} from '@angular/common/http'
     AddProjectsComponent,
     ExperienceModalComponent,
     EducationModalComponent,
-    ProjectModalComponent
+    ProjectModalComponent,
+    EditExpComponent
   ],
   imports: [
     BrowserModule,
