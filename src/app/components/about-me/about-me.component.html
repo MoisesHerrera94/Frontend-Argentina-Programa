@@ -11,15 +11,14 @@
         <div class="articulo">
             <div class="d-flex justify-content-between">
                 <p class="fs-2">Acerca de</p>
-                <a href="#">
+                <button href="#" data-bs-toggle="modal" data-bs-target="#aboutModal" class="btn">
                     <fa-icon [icon]="pen"></fa-icon>
-                </a>
+                </button>
             </div>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, maxime voluptate! 
-                Aut beatae officiis, accusamus quisquam voluptas, inventore veritatis dolore eligendi 
-                libero magni esse totam fugiat. Dolorem aliquid consectetur nemo?
+                {{acercaDe.descripcion}}
             </p>
         </div>
     </div>
 </div>
+<app-about-modal></app-about-modal>

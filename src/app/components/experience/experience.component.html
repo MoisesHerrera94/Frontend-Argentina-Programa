@@ -14,10 +14,10 @@
             <p class="my-0 fw-lighter">Desde:{{item.mesI+" "+item.anoI}} - Hasta:{{item.mesC+" "+item.anoC}}</p>
         </div>
         <div class="d-flex justify-content-end">
-            <button href="#" class="icon" (click)="editExp(item.id)">
+            <button href="#" class="icon btn" (click)="editExp(item.id)">
                 <fa-icon [icon]="editar"></fa-icon>
             </button>
-            <button href="#" class="icon" (click)="onClickDelete(item.id)">
+            <button href="#" class="icon btn" (click)="onClickDelete(item.id)">
                 <fa-icon [icon]="borrar"></fa-icon>
             </button>
         </div>

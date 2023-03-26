@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { listaExerienciasI } from './components/interface/experiencias.interface';
 import { IEducacion } from './components/interface/educacion.interface';
 import { IProyecto } from './components/interface/proyecto.interface';
+import { IAcerdaDe } from './components/interface/acercade.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -74,5 +75,15 @@ export class ConexionApiService {
   buscarProyecto(id:number):Observable<IProyecto>{
     let buscarProyecto ="/proyectos/buscar/"
     return this.http.get<IProyecto>(this.url+buscarProyecto+id)
+  }
+
+  verAcercaDe(id:number):Observable<IAcerdaDe>{
+    let verAcercaDe="/acercade/ver/"
+    return this.http.get<IAcerdaDe>(this.url+verAcercaDe+id)
+  }
+
+  editarAcercaDe(form:IAcerdaDe):Observable<IAcerdaDe>{
+    let editarAcercaDe="/acercade/editar"
+    return this.http.post<IAcerdaDe>(this.url+editarAcercaDe, form)
   }
 }

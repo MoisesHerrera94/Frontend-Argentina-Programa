@@ -27,6 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { EditExpComponent } from './components/edit-exp/edit-exp.component';
 import { EditEduComponent } from './components/edit-edu/edit-edu.component';
 import { EditProjectComponent } from './components/edit-project/edit-project.component';
+import { AboutModalComponent } from './components/modals/about-modal/about-modal.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { EditProjectComponent } from './components/edit-project/edit-project.com
     EditExpComponent,
     EditEduComponent,
     EditProjectComponent,
+    AboutModalComponent,
   ],
   imports: [
     BrowserModule,
