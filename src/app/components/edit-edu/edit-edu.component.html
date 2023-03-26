@@ -1,21 +1,22 @@
 <div class="container">
     <div class="row">
         <div class="col-12 d-flex justify-content-center"> 
-            <form #educationForm="ngForm" class="d-flex flex-column" (ngSubmit)="onSubmit(educationForm.value)">
+            <form #educationForm="ngForm" class="d-flex flex-column" (submit)="editando()">
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Titulo</label>
-                    <input type="text" class="form-control" id="titulo" name="titulo" ngModel>
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="educacion.titulo">
                   </div>
                   <div class="mb-3">
                     <label for="instituto" class="form-label">Instituto</label>
-                    <input type="text" class="form-control" id="instituto" name="institucion" ngModel>
+                    <input type="text" class="form-control" id="instituto" name="institucion" [(ngModel)]="educacion.institucion">
                   </div>
                   <div class="mb-3">
                     <label for="culminacion" class="form-label">Culminacion</label>
-                    <input type="number" class="form-control" id="culminacion" name="ano" ngModel>
+                    <input type="number" class="form-control" id="culminacion" name="ano" [(ngModel)]="educacion.ano">
                   </div>
                   <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary btn-lg m-2">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-lg m-2">Enviar</button>
+                    <button type="button" class="btn btn-primary btn-lg m-2" routerLink="">Volver</button>
                   </div>
             </form>
         </div>

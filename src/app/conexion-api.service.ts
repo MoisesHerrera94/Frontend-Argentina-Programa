@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { listaExerienciasI } from './components/interface/experiencias.interface';
+import { IEducacion } from './components/interface/educacion.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -26,12 +27,31 @@ export class ConexionApiService {
 
   deleteExperiencia(id:number):Observable<listaExerienciasI>{
     let delExp = "/experiencia/borrar/";
-    console.log(this.url+delExp+id)
     return this.http.delete<listaExerienciasI>(this.url+delExp+id);
   }
 
   buscarExperiencia(id:any):Observable<listaExerienciasI>{
     let buscarExp = "/experiencia/buscar/"
     return this.http.get<listaExerienciasI>(this.url+buscarExp+id)
+  }
+
+  getEducations():Observable<IEducacion>{
+    let listEducacion = "/educacion/ver"
+    return this.http.get<IEducacion>(this.url+listEducacion);
+  }
+
+  addEducacion(form:IEducacion):Observable<IEducacion>{
+    let addEdu = "/educacion/crear"
+    return this.http.post<IEducacion>(this.url+addEdu, form);
+  }
+
+  deleteEducacion(id:number):Observable<IEducacion>{
+    let deleteEdu = "/educacion/borrar/"
+    return this.http.delete<IEducacion>(this.url+deleteEdu+id);
+  }
+
+  buscarEducacion(id:number):Observable<IEducacion>{
+    let buscarEdu = "/educacion/buscar/"
+    return this.http.get<IEducacion>(this.url+buscarEdu+id);
   }
 }

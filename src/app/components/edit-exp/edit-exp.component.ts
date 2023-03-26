@@ -31,7 +31,7 @@ export class EditExpComponent implements OnInit {
   }
 
   editando(){
-    this.api.addExperiencia(this.valores).subscribe()
+    this.api.addExperiencia(this.valores).subscribe();
     this.router.navigate([''])
   }
 

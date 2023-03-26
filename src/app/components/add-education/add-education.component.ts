@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IEducacion } from '../interface/educacion.interface';
+import { ConexionApiService } from 'src/app/conexion-api.service';
 
 @Component({
   selector: 'app-add-education',
@@ -7,18 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEducationComponent implements OnInit {
 
-  model = {
-    titulo:"",
-    instituto:"",
-    fecha:Date
-  }
-
-  constructor() { }
+  constructor(private api:ConexionApiService) { }
 
   ngOnInit(): void {
   }
   
-  onSubmit(values:any): void{
-    console.log('Form values', values)
+  onSubmit(values:IEducacion){
+    this.api.addEducacion(values).subscribe(data => console.log(data));
+    window.location.reload()
   }
 }
