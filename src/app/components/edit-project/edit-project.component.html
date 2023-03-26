@@ -1,21 +1,22 @@
 <div class="container">
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
-            <form #formProjects="ngForm" class="d-flex flex-column" (ngSubmit)="onSubmit(formProjects.value)">
+            <form #formProjects="ngForm" class="d-flex flex-column" (ngSubmit)="editProject()">
                 <div class="my-1">
                     <label for="titulo" class="form-label">Nombre o Titulo del Proyecto</label>
-                    <input type="text" class="form-control" id="titulo" name="nombre" ngModel>
+                    <input type="text" class="form-control" id="titulo" name="nombre" [(ngModel)]="proyecto.nombre">
                 </div>
                 <div class="my-1">
                     <label for="tecnologias" class="form-label">Técnologias usadas</label>
-                    <textarea class="form-control" ngModel name="tecnologias" id="tecnologias" style="max-height: 150px;"></textarea>
+                    <textarea class="form-control" name="tecnologias" id="tecnologias" style="max-height: 150px;" [(ngModel)]="proyecto.tecnologias"></textarea>
                 </div>
                 <div class="my-1">
                     <label for="repo" class="form-label">Link del respositorio</label>
-                    <input type="text" class="form-control" id="repo" name="link" ngModel>
+                    <input type="text" class="form-control" id="repo" name="link" [(ngModel)]="proyecto.link">
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-primary m-2">Enviar</button>
+                    <button type="button" class="btn btn-primary m-2" routerLink="">Volver</button>
                 </div>
             </form>
         </div>

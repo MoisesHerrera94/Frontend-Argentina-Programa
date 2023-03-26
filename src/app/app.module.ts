@@ -26,6 +26,7 @@ import { ConexionApiService } from './conexion-api.service';
 import {HttpClientModule} from '@angular/common/http';
 import { EditExpComponent } from './components/edit-exp/edit-exp.component';
 import { EditEduComponent } from './components/edit-edu/edit-edu.component';
+import { EditProjectComponent } from './components/edit-project/edit-project.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { EditEduComponent } from './components/edit-edu/edit-edu.component';
     ProjectModalComponent,
     EditExpComponent,
     EditEduComponent,
+    EditProjectComponent,
   ],
   imports: [
     BrowserModule,

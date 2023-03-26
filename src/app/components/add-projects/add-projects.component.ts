@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IProyecto } from '../interface/proyecto.interface';
+import { ConexionApiService } from 'src/app/conexion-api.service';
 
 @Component({
   selector: 'app-add-projects',
@@ -6,18 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-projects.component.css']
 })
 export class AddProjectsComponent implements OnInit {
-  model = {
-    titulo:"Un titulo",
-    tecnologias:"Una tecno",
-    repositorio:"Un link"
-  }
 
-  constructor() { }
+  constructor(private api:ConexionApiService) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(value:any){
-    console.log('Form', value)
+  onSubmit(value:IProyecto){
+    this.api.addProyecto(value).subscribe(data => console.log(data));
+    window.location.reload()
   }
 }

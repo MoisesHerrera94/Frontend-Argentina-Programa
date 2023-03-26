@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import {faPen, faTrash} from '@fortawesome/free-solid-svg-icons'
+import { ConnectConfig } from 'rxjs';
+import { ConexionApiService } from 'src/app/conexion-api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -12,15 +15,20 @@ export class ProjectsComponent implements OnInit {
   github = faGithub;
   editar = faPen;
   borrar = faTrash;
+  proyectos:any;
 
-  proyectos = [{id:1, nombre:"Proyecto 1", tecnologias:"Las tecnologias", link:""}, 
-  {id:2, nombre:"Proyecto 2", tecnologias:"Las tecnologias", link:""}, 
-  {id:3, nombre:"Proyecto 3", tecnologias:"Las tecnologias", link:""}, 
-  {id:4, nombre:"Proyecto 4", tecnologias:"Las tecnologias", link:""}]
-
-  constructor() { }
+  constructor(private api:ConexionApiService, private router:Router) { }
 
   ngOnInit(): void {
+    this.api.getProyectos().subscribe(data => {this.proyectos=data})
   }
 
+  onDelete(id:number){
+    this.api.deleteProyecto(id).subscribe();
+    window.location.reload()
+  }
+
+  editProject(id:number){
+    this.router.navigate(['editProject/', id])
+  }
 }

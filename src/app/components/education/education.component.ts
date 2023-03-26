@@ -19,7 +19,7 @@ export class EducationComponent implements OnInit {
   constructor(private api:ConexionApiService, private router:Router) { }
 
   ngOnInit(): void {
-    this.api.getEducations().subscribe(data => {console.log(data); this.listEducacion = data})
+    this.api.getEducations().subscribe(data => {this.listEducacion = data})
   }
 
   onDelete(id:number){

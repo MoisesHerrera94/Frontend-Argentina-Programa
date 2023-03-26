@@ -15,7 +15,7 @@ export class AddEducationComponent implements OnInit {
   }
   
   onSubmit(values:IEducacion){
-    this.api.addEducacion(values).subscribe(data => console.log(data));
+    this.api.addEducacion(values).subscribe();
     window.location.reload()
   }
 }
