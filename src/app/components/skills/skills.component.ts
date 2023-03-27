@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {faHtml5, faJsSquare, faCss3, faBootstrap, faAngular, faGit, 
-faGithub, faReact} from '@fortawesome/free-brands-svg-icons'
 import {faFileCode} from '@fortawesome/free-regular-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { ConexionApiService } from 'src/app/conexion-api.service';
 
 @Component({
   selector: 'app-skills',
@@ -11,13 +10,24 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 })
 export class SkillsComponent implements OnInit {
 
-  habilidades = [{id:1, habilidad:"HTML5", icon:faHtml5}, {id:2, habilidad:"CSS3", icon:faCss3}, {id:3, habilidad:"JavaScript", icon:faJsSquare},
-  {id:4, habilidad:"Angular", icon:faAngular}, {id:5, habilidad:"TypeScript", icon:faFileCode}, {id:6, habilidad:"Java", icon:faFileCode}, {id:7, habilidad:"ReactJs", icon:faReact}]
-  borrar = faTrash;
+  icon=faFileCode
+  habilidades:any;
 
-  constructor() { }
+
+    borrar = faTrash;
+
+  constructor(private api:ConexionApiService) { }
 
   ngOnInit(): void {
+    this.api.getHabilidades().subscribe(data => {this.habilidades=data})
   }
 
+
+  deleteHab(id:number){
+    var alerta = window.confirm("Se eliminara la habilidad.");
+    if(alerta===true){
+      this.api.deleteHab(id).subscribe();
+      window.location.reload()
+    }
+  }
 }

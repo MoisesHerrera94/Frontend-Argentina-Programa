@@ -23,8 +23,11 @@ export class EducationComponent implements OnInit {
   }
 
   onDelete(id:number){
-    this.api.deleteEducacion(id).subscribe();
-    window.location.reload()
+    let alerta = window.confirm("Se eliminara el item:");
+    if(alerta===true){
+      this.api.deleteEducacion(id).subscribe();
+      window.location.reload()
+    }
   }
 
   editEdu(id:number){

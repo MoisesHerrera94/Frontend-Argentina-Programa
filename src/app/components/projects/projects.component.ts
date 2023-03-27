@@ -24,8 +24,11 @@ export class ProjectsComponent implements OnInit {
   }
 
   onDelete(id:number){
-    this.api.deleteProyecto(id).subscribe();
-    window.location.reload()
+    let alerta = window.confirm("Se eliminara el item");
+    if(alerta===true){
+      this.api.deleteProyecto(id).subscribe();
+      window.location.reload()
+    }
   }
 
   editProject(id:number){

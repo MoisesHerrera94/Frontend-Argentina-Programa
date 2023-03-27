@@ -28,6 +28,7 @@ import { EditExpComponent } from './components/edit-exp/edit-exp.component';
 import { EditEduComponent } from './components/edit-edu/edit-edu.component';
 import { EditProjectComponent } from './components/edit-project/edit-project.component';
 import { AboutModalComponent } from './components/modals/about-modal/about-modal.component';
+import { HabModalComponent } from './components/modals/hab-modal/hab-modal.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { AboutModalComponent } from './components/modals/about-modal/about-modal
     EditEduComponent,
     EditProjectComponent,
     AboutModalComponent,
+    HabModalComponent,
   ],
   imports: [
     BrowserModule,

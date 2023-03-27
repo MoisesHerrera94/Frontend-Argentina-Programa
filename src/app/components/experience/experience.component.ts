@@ -26,8 +26,11 @@ export class ExperienceComponent implements OnInit {
   }
 
   onClickDelete(id:number){
-    this.conexion.deleteExperiencia(id).subscribe();
-    window.location.reload()
+    let alerta = window.confirm("Se eliminara el item");
+    if(alerta===true){
+      this.conexion.deleteExperiencia(id).subscribe();
+      window.location.reload()
+    }
   }
 
   editExp(id:number){

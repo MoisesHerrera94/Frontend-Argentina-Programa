@@ -5,6 +5,7 @@ import { listaExerienciasI } from './components/interface/experiencias.interface
 import { IEducacion } from './components/interface/educacion.interface';
 import { IProyecto } from './components/interface/proyecto.interface';
 import { IAcerdaDe } from './components/interface/acercade.interface';
+import { IHabilidad } from './components/interface/habilidad.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -85,5 +86,20 @@ export class ConexionApiService {
   editarAcercaDe(form:IAcerdaDe):Observable<IAcerdaDe>{
     let editarAcercaDe="/acercade/editar"
     return this.http.post<IAcerdaDe>(this.url+editarAcercaDe, form)
+  }
+
+  getHabilidades():Observable<IHabilidad>{
+    let verHab = "/habilidad/ver"
+    return this.http.get<IHabilidad>(this.url+verHab);
+  }
+
+  crearHabilidad(form:IHabilidad):Observable<IHabilidad>{
+    let addHab = "/habilidad/crear"
+    return this.http.post<IHabilidad>(this.url+addHab, form);
+  }
+
+  deleteHab(id:number):Observable<IHabilidad>{
+    let delHab = "/habilidad/borrar/"
+    return this.http.delete<IHabilidad>(this.url+delHab+id);
   }
 }
