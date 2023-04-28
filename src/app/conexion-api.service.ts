@@ -12,7 +12,7 @@ import { IHabilidad } from './components/interface/habilidad.interface';
 })
 export class ConexionApiService {
 
-  private url = "http://localhost:8090";
+  private url = "https://shy-bunny-moisesherrera94.koyeb.app";
 
   constructor(private http:HttpClient) {
     

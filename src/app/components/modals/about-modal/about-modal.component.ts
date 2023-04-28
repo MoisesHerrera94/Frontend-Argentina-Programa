@@ -9,7 +9,7 @@ import { IAcerdaDe } from '../../interface/acercade.interface';
 })
 export class AboutModalComponent implements OnInit {
   acercaDe:IAcerdaDe={
-    id:0,
+    id:1,
     descripcion:""
   }
 
